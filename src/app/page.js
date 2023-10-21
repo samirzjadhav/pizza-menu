@@ -11,6 +11,11 @@ export default function App() {
     setAdvice(data.slip.advice);
     setCount((c) => c + 1);
   }
+
+  useEffect(() => {
+    getAdvice();
+  }, []);
+
   return (
     <div>
       <h1>{advice}</h1>
